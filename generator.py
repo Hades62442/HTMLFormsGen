@@ -220,4 +220,6 @@ def parseInputs(inputs, mainStr): # goes through all inputs and appends appropri
 numOfInputs = getNumOfInputs()
 inputs = getTypeOfInputs(numOfInputs)
 mainStr = parseInputs(inputs, mainStr)
+print("Copy and paste the following HTML code into the <form> tag:\n\n")
 print(mainStr)
+print("\n\n")
