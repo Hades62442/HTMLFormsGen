@@ -197,7 +197,6 @@ def parseInputs(inputs, mainStr): # goes through all inputs and appends appropri
             mainStr = mainStr + '</textarea><br><br>\n\n'
 
     submitTitle = input("\nEnter the title for the submit button: ")
-    submitValue = input("Enter the value for the submit button: ")
 
     submitOnClick = input("Enter [Y/N] if an alert should appear when the submit button is clicked: ")
     while submitOnClick.upper() != "Y" and submitOnClick.upper() != "N":
@@ -208,10 +207,10 @@ def parseInputs(inputs, mainStr): # goes through all inputs and appends appropri
         submitAlert = input("Enter the alert message which appears when the submit button is clicked: ")
         submitAlert = "'" + submitAlert + "'"
 
-        mainStr = mainStr + '<button type="submit" value="' + submitValue + '" onclick="alert(' + submitAlert + ')">' + submitTitle + '</button>'
+        mainStr = mainStr + '<input type="submit" value="' + submitTitle + '" onclick="alert(' + submitAlert + ')">'
 
     else:
-        mainStr = mainStr + '<button type="submit" value="' + submitValue + '">' + submitTitle + '</button>'
+        mainStr = mainStr + '<input type="submit" value="' + submitTitle + '">'
 
 
     return mainStr
